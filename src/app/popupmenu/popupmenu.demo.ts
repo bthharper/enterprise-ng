@@ -10,6 +10,13 @@ export class PopupMenuDemoComponent {
   public isInsertNoteDisabled = true;
   public insertCommentText = 'Enable';
   public insertNoteText = 'Enable';
+  public showFieldOneText = 'Remove';
+  public showFieldOne = true;
+
+  onShowFieldOne() {
+    this.showFieldOne = !this.showFieldOne;
+    this.showFieldOneText = this.showFieldOneText ? 'Remove' : 'Show';
+  }
 
   onInsertCommentButtonClicked() {
     this.isInsertCommentDisabled = !this.isInsertCommentDisabled;

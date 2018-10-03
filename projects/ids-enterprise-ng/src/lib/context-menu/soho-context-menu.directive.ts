@@ -23,6 +23,7 @@ export class SohoContextMenuDirective implements AfterViewInit, OnDestroy {
   // Default options block
   // -------------------------------------------
   private options: SohoPopupMenuOptions = {
+
     trigger: 'rightClick'
   };
 
@@ -141,6 +142,8 @@ export class SohoContextMenuDirective implements AfterViewInit, OnDestroy {
       if (this.contextMenu) {
         // The context menu is owned by the popup-menu component and should not
         // be destroyed here, so just clear the member variable.
+        console.log(`destroying contextmenu`);
+        this.contextMenu.destroy();
         this.contextMenu = null;
       }
     });

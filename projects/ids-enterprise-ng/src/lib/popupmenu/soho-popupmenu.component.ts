@@ -428,7 +428,9 @@ export class SohoPopupMenuComponent implements AfterViewInit, OnDestroy {
         this.jQueryElement.off();
       }
       if (this.popupmenu) {
+        console.log(`destroying popupmenu`);
         this.popupmenu.destroy();
+        this.popupmenu = null;
       }
     });
   }
